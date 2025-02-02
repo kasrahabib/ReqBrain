@@ -1,0 +1,122 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "REQID_ex": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "completion": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "query": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "class": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "task": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "A",
+        "FT",
+        "HOW-TO-WRITE-REQUIRMENT-TASK-SWARD-BASED",
+        "L",
+        "LF",
+        "MISSING-TASK-5-SHORTENED",
+        "MN",
+        "O",
+        "PE",
+        "PO",
+        "SC",
+        "SE",
+        "US"
+      ],
+      "_type": "ClassLabel"
+    },
+    "mistral_ai_instruct_7b_chat_hf_preds": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "falcon_7b_base_preds": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "falcon_7b_instruct_preds": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "llama2_7b_chat_hf_preds": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "zephyr_7b_beta_preds": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "openai_compe_gpt4o_24_11_20": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "chatgpt4o_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "chatgpt4o_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "zephyr_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "zephyr_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "mistralai_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "mistralai_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "falcon_base_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "falcon_base_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "falcon_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "falcon_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "llama_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "llama_bert_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

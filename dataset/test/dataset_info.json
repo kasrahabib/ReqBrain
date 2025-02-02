@@ -1,0 +1,54 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "REQID_ex": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "completion": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "query": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "class": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "task": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "A",
+        "FT",
+        "HOW-TO-WRITE-REQUIRMENT-TASK-SWARD-BASED",
+        "L",
+        "LF",
+        "MISSING-TASK-5-SHORTENED",
+        "MN",
+        "O",
+        "PE",
+        "PO",
+        "SC",
+        "SE",
+        "US"
+      ],
+      "_type": "ClassLabel"
+    },
+    "ds_format": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
