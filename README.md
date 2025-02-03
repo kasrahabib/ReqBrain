@@ -87,7 +87,7 @@ The [dataset](./dataset) directory contains the instruct dataset.
 
 ### **Loading the Dataset Properly**
 
-The dataset is formatted to support and be used directly with the following different LLMs, e.g., *Falcon*, *LLaMA*, or *Zephyr*.  
+The dataset is structured to be compatible and directly used with *Falcon*, *LLaMA*, *Zephyr*, and other LLMs sharing a similar input format.  
 
 #### **Step 1: Install the Required Library**
 
