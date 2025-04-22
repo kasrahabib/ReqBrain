@@ -1,13 +1,11 @@
 # 📄 **Usage Restriction Prior to Paper Publication**
 
-As part of the review process for our academic paper titled:  
-<u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>,  
-this repository is **strictly closed-source** and provided **solely as a replication package**.
+This repository is provided solely as a replication package as part of the review process for our academic paper titled:  <u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
 
+Access is granted for **review purposes only**, and **no use beyond replication for review is permitted**.<br>
 **Do not use, modify, copy, or redistribute any part of this repository** until the paper is officially published.  
-Access is granted for **review purposes only**, and **no use beyond replication for review is permitted**.
 
-After publication, this repository will be **archived on [Zenodo](https://zenodo.org/)** to ensure reproducibility and prevent versioning conflicts.
+After publication, this repository **may be** be archived on [Zenodo](https://zenodo.org/) with an open license to ensure reproducibility and prevent versioning conflicts.
 
 Please refer to the LICENSE file for full legal terms.
 
@@ -16,17 +14,17 @@ Please refer to the LICENSE file for full legal terms.
 **Copyright © Mohammad Kasra Habib, 2025. All rights reserved.**
 
 This repository is provided solely for replication purposes during the peer review process for the academic paper titled  
-"ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation."
+<u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
 
 Use, reproduction, modification, or redistribution of any part of this repository is **strictly prohibited** until the paper is officially published.
 
 No license is granted for use, and this repository is not open-source in any form during the review period.  
-Upon publication, an open license may be applied, and the repository will be archived permanently on [Zenodo](https://zenodo.org/).
+After publication, this repository **may be** be archived on [Zenodo](https://zenodo.org/) with an open license to ensure reproducibility and prevent versioning conflicts.
 
 
 
 # **ReqBrain**
-**Req**uirements **Brain**, an open-source, is a task-specific instruction-tuned language model designed to generate well-structured ISO 29148 compliance software requirements. It provides automation support to requirements engineers for the elicitation and documentation of requirements. Requirements engineers can interact with ReqBrain in a chat format to generate new requirements, generate requirments and classify on the fly, and turn bug descriptions into well-structured. Additionally, they can provide an existing set of requirements to identify missing ones, classify requirements by type, or combine it with RAG to process huge bulks of proprietary textual data and elicit in context well-structured requirements. 
+**Req**uirements **Brain**, an open-source, task-specific instruction-tuned language model, is trained to generate authentic and adequate software requirements. It generates requirements to support elicitation and specification. Requirements engineers can interact with ReqBrain in a chat format to generate new requirements, generate requirements and classify on the fly, and turn bug descriptions into well-structured requirements. Additionally, they can provide an existing set of requirements to identify missing ones, classify requirements by type, or combine it with RAG to process huge bulks of proprietary textual data and elicit well-structured requirements in context. 
 
 
 ---
