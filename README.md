@@ -13,8 +13,7 @@ Please refer to the LICENSE file for full legal terms.
 
 **Copyright © Mohammad Kasra Habib, 2025. All rights reserved.**
 
-This repository is provided solely for replication purposes during the peer review process for the academic paper titled  
-<u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
+This repository is provided solely for replication purposes during the peer review process for the academic paper titled: <u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
 
 Use, reproduction, modification, or redistribution of any part of this repository is **strictly prohibited** until the paper is officially published.
 
