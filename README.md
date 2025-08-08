@@ -1,24 +1,37 @@
-# 📄 **Usage Restriction Prior to Paper Publication**
+# 📄 **Usage Prior to Paper Publication**
 
-This repository is provided solely as a replication package as part of the review process for our academic paper titled:  <u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
+This repository accompanies the preprint of our paper:<br>
+**ReqBrain:** Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation<br>
+**arXiv:** https://arxiv.org/abs/2505.17632
 
-Access is granted for **review purposes only**, and **no use beyond replication for review is permitted**.<br>
-**Do not use, modify, copy, or redistribute any part of this repository** until the paper is officially published.  
+The paper is under peer review and has not yet been formally published. This repository is made publicly available to promote transparency, reproducibility, and early feedback.<br>
 
-After publication, this repository **may be** be archived on [Zenodo](https://zenodo.org/) with an open license to ensure reproducibility and prevent versioning conflicts.
+If you use, modify, or build upon any code, data, or models from this repository, please cite the arXiv preprint and this GitHub repository provided below.
 
-Please refer to the LICENSE file for full legal terms.
+## Citation:
+```bibtex
+@misc{habib2025reqbrain,
+      title={ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation}, 
+      author={Mohammad Kasra Habib and Daniel Graziotin and Stefan Wagner},
+      year={2025},
+      eprint={2505.17632},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2505.17632}, 
+}
+```
 
 # **LICENSE**
 
 **Copyright © Mohammad Kasra Habib, 2025. All rights reserved.**
 
-This repository is provided solely for replication purposes during the peer review process for the academic paper titled: <u>ReqBrain: Task-Specific Instruction Tuning of LLMs for AI-Assisted Requirements Generation</u>.
+No official open-source license is granted until the paper is formally published. This repository is not considered open-source in its current state.
+Use is limited to non-commercial, private research purposes only.
+Commercial use and redistribution are strictly prohibited without prior permission from the first author.
 
-Use, reproduction, modification, or redistribution of any part of this repository is **strictly prohibited** until the paper is officially published.
+After publication, the repository may be archived on Zenodo with an open license to ensure reproducibility and prevent versioning conflicts.
 
-No license is granted for use, and this repository is not open-source in any form during the review period.  
-After publication, this repository **may be** be archived on [Zenodo](https://zenodo.org/) with an open license to ensure reproducibility and prevent versioning conflicts.
+If you use any part of this repository, please cite the arXiv preprint and this GitHub repository.
 
 
 
