@@ -1,0 +1,54 @@
+%%{ init: { "theme": "default", "flowchart": { "fontSize": 20, "curve": "linear", "nodeSpacing": 50, "rankSpacing": 1 } } }%%
+flowchart LR
+subgraph ENV[" "]
+direction LR
+    subgraph ELICIT["Elicitation"]
+        
+        B@{shape: odd, label: "fa:fa-users PROMPT"}
+        C("fas:fa-brain ReqBrain")
+
+        subgraph SPECIFY["Specification"]
+            D@{shape: processes, label: "fas:fa-brain  ISO 29148 
+            Compliant Requirements"}
+        end
+        B --❶ system X requirements--> C
+        C --❷ generates --> D
+    end
+    
+    subgraph ANALYZE["Analysis"]
+        E[["fa:fa-users  Evaluate, 
+        Refine or Expand"]]
+        D --❸--> E
+        
+    end
+    
+    subgraph VALIDATE["Validation"]
+        F[["fa:fa-users Review, Confirm or 
+        Refine with Stakeholders"]]
+        E --❺--> F
+    end
+
+    subgraph INVISIBLE[" "]
+    end
+
+    %% Arrows  
+    E --❹ elicit further--> B
+    F --❻ next iteration--> B
+    
+end
+
+    
+
+    %% Styling
+    style SPECIFY fill:#ffcccb,stroke:#d46a6a,stroke-width:1px
+    style SPECIFY rx:8px,ry:8px
+
+    %% Changing font size
+    classDef phaseTitle font-size:21px,font-weight:bold;
+    class ELICIT,ANALYZE,SPECIFY,VALIDATE phaseTitle;
+
+    classDef default font-size:18px;
+
+    style INVISIBLE fill:#ffffff00,stroke:#ffffff00,stroke-width:0px
+
+style ENV fill:#f0f0f0,stroke:#d3d3d3,stroke-dasharray:8,8,stroke-width:2.5px

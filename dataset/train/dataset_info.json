@@ -6,6 +6,14 @@
       "dtype": "string",
       "_type": "Value"
     },
+    "Project Name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Subproject Name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
     "completion": {
       "dtype": "string",
       "_type": "Value"

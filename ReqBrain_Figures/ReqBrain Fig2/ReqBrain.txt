@@ -1,0 +1,91 @@
+%%{ init: { "theme": "default", "flowchart": {"curve": "linear", "nodeSpacing": 50, "rankSpacing":  } } }%%
+
+flowchart LR
+
+subgraph ENV[" "]
+    %% direction LR
+        EV_SET@{ shape: "lin-cyl", label: "**Evaluation Set**\n*[(insts, reqs)...n]*"}
+        KIB3@{ shape: lin-cyl, label: "**3 × KIB³ SRS**\n*[(insts, reqs)...n]*" }
+        UM_2@{ shape: rect, label: "**Zephyr-7b-beta**\n*not-fine-tuned*" }
+        
+        subgraph PHASE_1[" "]
+        UM_1@{ shape: rect, label: "**ChatGPT-4o**\n*not-fine-tuned*" }
+        TM@{ shape: processes, label: "**5 × Fine-Tuned\nModels**" }
+        E@{ shape: docs, label: "**6 × Evaluation Set**\n*[(reqs, gen-reqs)...n] sets*"}
+        F@{ shape: tag-rect, label: "**BERT & Frugal Score\n(RQ1.1 & RQ1.2)**<br>*selected: Zephyr-7b-beta*" }
+        ReqBrain@{ shape: rect, label: "fas:fa-brain **ReqBrain**" }
+    
+        subgraph T_1["*<mark>STEP 1</mark>: Automated NLP metrics evaluation*"]
+        end
+    end  
+
+    subgraph PHASE_2[" "]
+        Task_B@{ shape: lin-rect, label: "**TASK B (RQ1.3)**\n*anonymized & shuffled list\n[gen-reqs, gen-reqs...n]*"}
+        Task_C@{ shape: lin-rect, label: "**Task C (RQ2)**\n*anonymized & shuffled list\n[reqs, gen-reqs...n]*"}
+        Task_D@{ shape: lin-rect, label: "**TASK D (RQ2)**\n*[(inst, req, gen-req)...n] list*"}
+        subgraph T_2["*<mark>STEP 2</mark>: Tasks for participants*"]
+        end
+    end
+
+    Ps@{ shape: lin-cyl, label: "fa:fa-users **Participants**" }
+    
+    subgraph PHASE_3[" "]
+        ANAL_B@{ shape: lin-rect, label: "**Evaluated Task B (RQ1.3)**\n*[1 - 5] -> (likert ratings list) &\n[AI/HUMAN] -> (dichotomous list)*"}
+        ANAL_C@{ shape: lin-rect, label: "**Evaluated Task C (RQ2)**\n*[1 - 5] -> (likert ratings list) &\n[AI/HUMAN] -> (dichotomous list)*"}
+        ANAL_D@{ shape: lin-rect, label: "**Evaluated Task D (RQ2)**\n *[1 - 5] -> (likert ratings list)*"}
+        subgraph T_3["*<mark>STEP 3</mark>: Evaluated tasks from participants*"]
+        end
+    end
+
+end
+
+%% Phase 1 arrow connections
+EV_SET --**insts**--> TM
+EV_SET --**insts**--> UM_1
+EV_SET --**reqs**--> E
+EV_SET --**insts**--> UM_2
+TM --**gen-reqs**--> E
+UM_1 --**gen-reqs**--> E
+E --> F
+F --> ReqBrain
+UM_2 --**gen-reqs**--> Task_B
+EV_SET --**reqs**--> Task_C
+
+%% Phase 2 arrow connections
+KIB3 -.**insts**.-> ReqBrain
+ReqBrain --**gen-reqs**--> Task_B
+ReqBrain --**gen-reqs**--> Task_C
+ReqBrain -.**gen-reqs**.-> Task_D
+KIB3 --(insts, reqs)--> Task_D
+Task_B --**anonymized**--> Ps
+Task_C --**anonymized**--> Ps
+Task_D -.-> Ps
+%% Task_B~~~Task_C~~~Task_D
+
+%% Phase 3 arrow connections
+Ps --> ANAL_B
+Ps --> ANAL_C
+Ps --> ANAL_D
+%% ANAL_B~~~ANAL_C~~~ANAL_D
+
+    classDef PastelPink fill:#ffcccb,stroke:#d46a6a,stroke-width:1.5px
+    class TM,UM_1,UM_2,ReqBrain,ReqBrain_1 PastelPink
+
+    classDef PastelTeal fill:#B2DCDC,stroke:#9CBEBE,stroke-width:1.5px;
+    class EV_SET,KIB3,Ps_1,Ps PastelTeal
+
+    classDef makeRound rx:8px,ry:8px
+    class UM_1,UM_2,TM,ReqBrain_1,ReqBrain makeRound;
+
+    classDef phaseTitle font-size:30px,font-weight:bold;
+    class T_1,T_2,T_3 phaseTitle;
+    
+    classDef InvisibleGroup fill:transparent ,stroke:none
+    class T_1,T_2,T_3, InvisibleGroup
+
+    classDef nowrap text-wrap:nowrap;
+    class EV_SET,KIB3,E,F,PHASE_1,PHASE_2,PHASE_3,ANAL_B,ANAL_C,ANAL_D,Task_B,Task_C,Task_D,TM nowrap
+    
+    classDef default font-size:26;
+
+style ENV fill:#f0f0f0,stroke:#d3d3d3,stroke-dasharray:8,8,stroke-width:2.5px,rx:10,ry:10
