@@ -32,7 +32,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
   <tr>
     <td><b>Zephyr-7b-beta</b></td>
     <td><b>12.2</b></td>
-    <td><b>0.42</b></td>
+    <td><b>0.43</b></td>
     <td><b>0.20</b></td>
     <td><b>0.36</b></td>
     <td><b>918</b></td>
@@ -47,7 +47,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>3.16</td>
     <td>0.24</td>
     <td>0.10</td>
-    <td>0.20</td>
+    <td>0.19</td>
     <td>4109</td>
     <td>487</td>
     <td>0.84</td>
@@ -95,17 +95,17 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>0.88</td>
   </tr>
   <tr>
-    <td><b>ChatGPT-4o (untuned)</b></td>
-    <td>2.02</td>
-    <td>0.15</td>
-    <td>0.07</td>
-    <td>0.12</td>
-    <td>6424</td>
-    <td>762</td>
+    <td><b>ChatGPT-5.4 (untuned)</b></td>
+    <td>2.58</td>
+    <td>0.21</td>
+    <td>0.09</td>
+    <td>0.17</td>
+    <td>4869</td>
+    <td>577</td>
     <td>0.81</td>
     <td>0.88</td>
     <td>0.84</td>
-    <td>0.86</td>
+    <td>0.85</td>
   </tr>
 </table>
 
