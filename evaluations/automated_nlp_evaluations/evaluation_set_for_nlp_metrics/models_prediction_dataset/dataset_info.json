@@ -54,6 +54,38 @@
       "dtype": "string",
       "_type": "Value"
     },
+    "claude_sonnet_46_2026_01": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "deepseek_chat_v_32_25_12_01": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "claude46_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "claude46_bleu_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "claude46_rougel_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "deepseekv32_frugal_score": {
+      "dtype": "float32",
+      "_type": "Value"
+    },
+    "deepseekv32_bleu_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "deepseekv32_rougel_score": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
     "chatgpt54_frugal_score": {
       "dtype": "float32",
       "_type": "Value"

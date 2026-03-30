@@ -8,7 +8,7 @@ This directory contains all the scripts and visualizations used to evaluate the 
 #### [`automated_nlp_metrics_evaluation.ipynb`](./automated_nlp_metrics_evaluation.ipynb)  
 This notebook evaluates model-generated requirements using 5 automated NLP metrics for ***Human Alignment<sub>HA</sub>*** variable:
 
-BERTScore precision (P), recall (R), and F1 are computed per instance and then averaged across the evaluation set; therefore, the reported F1 does not equal the harmonic mean of P and R.  The top five rows present the fine-tuned models (RQ1.1).   ChatGPT-4o is included to compare the selected fine-tuned model (ReqBrain) with an untuned general LLM (RQ1.2). Best scores are in **bold**.
+BERTScore precision (P), recall (R), and F1 are computed per instance and then averaged across the evaluation set; therefore, the reported F1 does not equal the harmonic mean of P and R.  The top five rows present the fine-tuned models (RQ1.1).   ChatGPT-4o, DeepSeek Chat V3.2, and Claude Sonnet 4.6 are included to compare the selected fine-tuned model (ReqBrain) with an untuned general LLM (RQ1.2). Best scores are in **bold**.
 
 <table>
   <tr>
@@ -32,7 +32,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
   <tr>
     <td><b>Zephyr-7b-beta</b></td>
     <td><b>12.2</b></td>
-    <td><b>0.43</b></td>
+    <td><b>0.42</b></td>
     <td><b>0.20</b></td>
     <td><b>0.36</b></td>
     <td><b>918</b></td>
@@ -47,7 +47,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>3.16</td>
     <td>0.24</td>
     <td>0.10</td>
-    <td>0.19</td>
+    <td>0.20</td>
     <td>4109</td>
     <td>487</td>
     <td>0.84</td>
@@ -86,7 +86,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>2.34</td>
     <td>0.23</td>
     <td>0.09</td>
-    <td>0.19</td>
+    <td>0.18</td>
     <td>3933</td>
     <td>466</td>
     <td>0.81</td>
@@ -107,6 +107,32 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>0.84</td>
     <td>0.85</td>
   </tr>
+  <tr>
+    <td><b>DeepSeek Chat V3.2 (untuned)</b></td>
+    <td>0.70</td>
+    <td>0.08</td>
+    <td>0.03</td>
+    <td>0.06</td>
+    <td>15262</td>
+    <td>1810</td>
+    <td>0.81</td>
+    <td>0.87</td>
+    <td>0.84</td>
+    <td>0.85</td>
+  </tr>
+  <tr>
+    <td><b>Claude Sonnet 4.6 (untuned)</b></td>
+    <td>1.08</td>
+    <td>0.10</td>
+    <td>0.04</td>
+    <td>0.08</td>
+    <td>9841</td>
+    <td>1167</td>
+    <td>0.80</td>
+    <td>0.87</td>
+    <td>0.83</td>
+    <td>0.85</td>
+  </tr>
 </table>
 
 
@@ -121,7 +147,9 @@ Contains scripts and prediction outputs for generating requirements using differ
 - **[`llama_chat_hf_prediction.ipynb`](./evaluation_set_for_nlp_metrics/llama_chat_hf_prediction.ipynb):** Generates requirements using LLaMA.  
 - **[`mistralai-instruct_prediction.ipynb`](./evaluation_set_for_nlp_metrics/mistralai-instruct_prediction.ipynb):** Generates requirements using MistralAI.  
 - **[`zephyr_prediction.ipynb`](./evaluation_set_for_nlp_metrics/zephyr_prediction.ipynb):** Generates requirements using Zephyr.  
-- **[`chatgpt_4o_latest.ipynb`](./evaluation_set_for_nlp_metrics/chatgpt_4o_latest.ipynb):** Generates requirements using ChatGPT-4o. 
+- **[`chatgpt_5_4_latest.ipynb`](./evaluation_set_for_nlp_metrics/chatgpt_5_4_latest.ipynb):** Generates requirements using ChatGPT-5.4. 
+- **[`claude-sonnet_4_6_latest.ipynb`](./evaluation_set_for_nlp_metrics/claude-sonnet_4_6_latest.ipynb):** Generates requirements using Claude Sonnet 4.6. 
+- **[`deepseek_v3_2_latest.ipynb`](./evaluation_set_for_nlp_metrics/deepseek_v3_2_latest.ipynb):** Generates requirements using SeepSeek Chat V3.2. 
 - **[`models_prediction_dataset/`](./evaluation_set_for_nlp_metrics/models_prediction_dataset/):** Contains the combined dataset of original requirements and generated predictions used for pairwise evaluation.
 
 ---
