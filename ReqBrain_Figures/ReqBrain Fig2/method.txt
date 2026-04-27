@@ -1,0 +1,91 @@
+%%{ init: { "theme": "neutral", "themeVariables": {
+    "fontFamily": "Georgia, serif",
+        "fontSize": "25px",
+    "borderRadius": "2px"
+  }, "flowchart": {"curve": "linear", "nodeSpacing": 15, "rankSpacing": 5} } }%%
+
+flowchart 
+
+subgraph ENV[" "]
+    %% direction LR
+        EV_SET@{ shape: "lin-cyl", label: "**Evaluation Set**<br>*[(insts, reqs)...n]*"}
+        KIB3@{ shape: lin-cyl, label: "**3 × KIB³ SRS**<br>*[(insts, reqs)...n]*" }
+        UM_2@{ shape: stadium, label: "fas:fa-cube  ReqBrain Baseline" }
+        
+        subgraph PHASE_1["Phase 1: NLP Metrics Evaluations"]
+        subgraph em1[" "]
+        end
+        UM_1@{ shape: stadium, label: "fas:fa-cube 3 × General-Pr. LLMs" }
+        TM@{ shape: stadium, label: "fas:fa-brain 5 ×Fine-tuned LLMs" }
+        F@{ shape: procs, label: "**Task A**<br>*[(reqs., grs.)...n]*" }
+        ReqBrain@{ shape: stadium, label: "fas:fa-brain ReqBrain" }
+    end  
+ EV_SET ~~~ em1
+    subgraph PHASE_2["Phase 2: Participant Tasks"]
+
+        Task_B@{ shape: procs, label: "**Task B**<br>*[grs, grs...n]*"}
+        Task_C@{ shape: procs, label: "**Task C**<br>*[grs, grs...n]*"}
+        Task_D@{ shape: procs, label: "**Task D**<br>*[(inst, req, grs)...n]*"}
+    end
+
+    Ps@{ shape: procs, label: "fa:fa-users<br>" }
+    
+    subgraph PHASE_3["Phase 3: Results"]
+        subgraph em[" "]
+    end
+    ANAL_B@{ shape: procs, label: "**Task B**<br>*Binary Ratings*" }
+    ANAL_C@{ shape: procs, label: "**Task C**<br>*Likert Ratings*" }
+    ANAL_D@{ shape: procs, label: "**Task D**<br>*Likert Ratings*" }
+    end
+
+end
+
+%% Phase 1 arrow connections
+EV_SET --insts--> TM
+EV_SET --insts--> UM_1
+EV_SET --reqs--> F
+EV_SET --insts--> UM_2
+TM --grs--> F
+UM_1 --grs--> F
+F --RQ1.1-1.2--> ReqBrain
+UM_2 --grs--> Task_B
+EV_SET --reqs--> Task_C
+
+%% Phase 2 arrow connections
+KIB3 -.insts.-> ReqBrain
+ReqBrain --grs--> Task_B
+ReqBrain --grs--> Task_C
+ReqBrain -.grs.-> Task_D
+KIB3 --(insts, reqs)--> Task_D
+Task_B --anonymized--> Ps
+Task_C --anonymized--> Ps
+Task_D -.-> Ps
+Task_B~~~Task_C~~~Task_D
+
+%% Phase 3 arrow connections
+Ps --RQ1.3--> ANAL_B
+Ps --RQ2--> ANAL_C
+Ps --RQ2--> ANAL_D
+
+
+    classDef PastelPink fill:#ffcccb,stroke:#d46a6a,stroke-width:1.5px
+    class ReqBrain,TM,UM_1,UM_2 PastelPink
+
+
+    classDef PastelTeal fill:#C6E6E6,stroke:#9CBEBE,stroke-width:1.5px;
+    class E,EV_SET,KIB3,Ps_1,Ps PastelTeal
+
+    classDef phaseTitle font-size:30px,font-weight:bold;
+    class PHASE_1,PHASE_2,PHASE_3,Ps phaseTitle;
+
+    classDef nowrap text-wrap:nowrap;
+    class UM_2,UM_1,EV_SET,KIB3,E,F,PHASE_1,PHASE_2,PHASE_3,ANAL_B,ANAL_C,ANAL_D,Task_B,Task_C,Task_D,TM nowrap
+    
+    classDef NoStroke stroke-width:0px,rx:15px,ry:15px;
+    class PHASE_1,PHASE_2,PHASE_3 NoStroke
+    
+    classDef MakeInvesible fill:#ffffff00,stroke:#ffffff00,stroke-width:0px;
+    class em,em1,Ps MakeInvesible
+    
+    classDef SoftColor fill:#F7F7F3,stroke:#EDEDED,rx:8px,ry:8px;
+    class ENV SoftColor;

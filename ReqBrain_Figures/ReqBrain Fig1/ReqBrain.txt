@@ -1,54 +1,76 @@
-%%{ init: { "theme": "default", "flowchart": { "fontSize": 20, "curve": "linear", "nodeSpacing": 50, "rankSpacing": 1 } } }%%
+%%{ init: { "theme": "neutral", "themeVariables": {
+    "fontFamily": "Georgia, serif",
+    "borderRadius": "2px"
+  }, "flowchart": {"curve": "linear", "nodeSpacing": 5, "rankSpacing": 5} } }%%
+
 flowchart LR
 subgraph ENV[" "]
 direction LR
-    subgraph ELICIT["Elicitation"]
-        
-        B@{shape: odd, label: "fa:fa-users PROMPT"}
-        C("fas:fa-brain ReqBrain")
-
-        subgraph SPECIFY["Specification"]
-            D@{shape: processes, label: "fas:fa-brain  ISO 29148 
-            Compliant Requirements"}
+    subgraph ELICITATION["Elicitation"]
+        subgraph EA["Elicited<br>Artifacts"]
         end
-        B --❶ system X requirements--> C
-        C --❷ generates --> D
-    end
-    
-    subgraph ANALYZE["Analysis"]
-        E[["fa:fa-users  Evaluate, 
-        Refine or Expand"]]
-        D --❸--> E
+        HUMAN@{shape: procs, label: "fa:fa-users<br>Engineers"}      
         
+        subgraph LLM["Reqs. Generation with a Fine-tuned LLM"]
+            instruct@{shape: notch-rect, label: "**•** a domain description<br> **•** existing requirements<br>**•** follow - up, expand or"}
+            ReqBrain@{ shape: stadium, label: "fas:fa-brain ReqBrain"}  
+        end
     end
-    
-    subgraph VALIDATE["Validation"]
-        F[["fa:fa-users Review, Confirm or 
-        Refine with Stakeholders"]]
-        E --❺--> F
+    subgraph SPECIFICATION["Specification"]
+        specify@{shape: processes, label: "fa:fa-users, fas:fa-brain ISO 29148 Reqs."}
     end
-
+    subgraph ANALYSIS["Analysis"]
+        analyse@{ shape: processes, label: "fa:fa-users Evaluate,<br>Refine or Expand "}  
+    end
+    subgraph VALIDATION["Validation"]
+        validate@{shape: processes, label: "fa:fa-users Review & Refine<br>with Stakeholders"}
+    end
     subgraph INVISIBLE[" "]
     end
-
-    %% Arrows  
-    E --❹ elicit further--> B
-    F --❻ next iteration--> B
-    
 end
+
+%% CONNECTIONS & ARROWS
+    EA <====> HUMAN 
+    HUMAN --①--> analyse
+    HUMAN <-.❹ elicit further.-> analyse
+    ReqBrain ~~~ analyse
+    analyse -.❺.-> validate    
+    HUMAN -.- instruct
+    instruct -.❶ instructs.-> ReqBrain
+    ReqBrain -.❷ generates.-> specify
+    specify -.❸.-> analyse
+    analyse --②--> specify
+    specify --③--> validate
+    validate --④ next iteration--> EA
+
 
     
 
     %% Styling
-    style SPECIFY fill:#ffcccb,stroke:#d46a6a,stroke-width:1px
-    style SPECIFY rx:8px,ry:8px
+    classDef ModelColor fill:#FFD6D6,stroke:#d46a6a,stroke-width:1px
+    class ReqBrain ModelColor
 
     %% Changing font size
     classDef phaseTitle font-size:21px,font-weight:bold;
-    class ELICIT,ANALYZE,SPECIFY,VALIDATE phaseTitle;
+    class ELICITATION,ANALYSIS,SPECIFICATION,VALIDATION phaseTitle;
 
-    classDef default font-size:18px;
+    classDef subPhaseTitle font-size:18px,font-weight:bold,stroke-dasharray:5,stroke-width:2px;
+    class HUMAN,LLM,EA subPhaseTitle;
 
-    style INVISIBLE fill:#ffffff00,stroke:#ffffff00,stroke-width:0px
+    classDef MakeInvesible fill:#ffffff00,stroke:#ffffff00,stroke-width:0px;
+    class HUMAN,INVISIBLE,EA MakeInvesible
 
-style ENV fill:#f0f0f0,stroke:#d3d3d3,stroke-dasharray:8,8,stroke-width:2.5px
+    classDef makeRound rx:8px,ry:8px
+    class ELICITATION,LLM,ANALYSIS,SPECIFICATION,VALIDATION makeRound;
+
+    classDef nowrap text-wrap:nowrap;
+    class text nowrap
+
+    %% classDef PastelPink fill:#F7F7F3,stroke:#7A7A7A,color:#222222;
+    %% class ELICITATION,LLM,ANALYSIS,SPECIFICATION,VALIDATION PastelPink
+
+    classDef NoStroke stroke-width:0px;
+    class ELICITATION,ANALYSIS,SPECIFICATION,VALIDATION NoStroke
+
+    classDef SoftColor fill:#F7F7F3,stroke:#EDEDED,rx:8px,ry:8px;
+    class ENV SoftColor;
