@@ -62,12 +62,17 @@ The repository provides:
 
 ---
 
-## **Running Demo**  
+## Running Demo
 
-You can explore the basic functionality of ReqBrain through the interactive Jupyter Notebook demo: 
-- **Model Download:** It automatically downloads the model weights from our Hugging Face repository.
-- **Step-by-Step Guidance:**  The notebook guides you through the process and explains the key steps involved.
-- **GPU Requirement:** A GPU with a minimum of 32GB GPU memory is required to ensure smooth execution.
+The repository includes `reqbrain_demo.ipynb` to demonstrate the intended usage workflow of ReqBrain.
+
+However, the demo cannot be executed directly during double-anonymous review because identifying repository links and model artifacts are omitted to preserve anonymity. Due to platform constraints on hosting large model files, the trained model weights cannot be included in the anonymized replication package.
+
+The models can be made available to the editors upon reasonable request through an anonymity-preserving mechanism and will be made publicly available upon acceptance.
+
+- **Demo Notebook:** `reqbrain_demo.ipynb` is provided in the repository root directory.
+- **Model Weights:** Omitted from the anonymized package during review.
+- **GPU Requirement:** Running the demo after model access requires a GPU with a minimum of 32GB GPU memory.
 
 
 

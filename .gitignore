@@ -6,4 +6,8 @@ test_codes.ipynb
 ReqBrain_Figures/i*
 dataset_with_non_disclosure_requirements_for_paper_stats_and_visualization/
 evaluations/automated_nlp_evaluations/evaluation_set_for_nlp_metrics/kasra_run_evlaution_on_this_original/*
-**/LICENSE
+**LICENSE
+
+ReqBrain_Figures/ReqBrain Fig1 from Second old/*
+ReqBrain_Figures/ReqBrain Fig2 from Second old/*
+models/*
