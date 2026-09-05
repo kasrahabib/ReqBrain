@@ -11,3 +11,7 @@ evaluations/automated_nlp_evaluations/evaluation_set_for_nlp_metrics/kasra_run_e
 ReqBrain_Figures/ReqBrain Fig1 from Second old/*
 ReqBrain_Figures/ReqBrain Fig2 from Second old/*
 models/*
+
+evaluations/human_evaluations/_old_independent_tests/*
+
+dataset_domain_coverage_and_requirments_count.ipynb

@@ -7,12 +7,12 @@ flowchart LR
 subgraph ENV[" "]
 direction LR
     subgraph ELICITATION["Elicitation"]
-        subgraph EA["Elicited<br>Artifacts"]
+        subgraph EA["Existing<br>Artifacts"]
         end
         HUMAN@{shape: procs, label: "fa:fa-users<br>Engineers"}      
         
         subgraph LLM["Reqs. Generation with a Fine-tuned LLM"]
-            instruct@{shape: notch-rect, label: "**•** a domain description<br> **•** existing requirements<br>**•** follow - up, expand or"}
+            instruct@{shape: notch-rect, label: "**•** a software description<br> **•** existing requirements<br>**•** follow - up, expand or"}
             ReqBrain@{ shape: stadium, label: "fas:fa-brain ReqBrain"}  
         end
     end

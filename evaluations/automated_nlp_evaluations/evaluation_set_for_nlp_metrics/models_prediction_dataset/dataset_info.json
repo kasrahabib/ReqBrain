@@ -50,15 +50,15 @@
       "dtype": "string",
       "_type": "Value"
     },
-    "compe_gpt_54_2026_03_20": {
-      "dtype": "string",
-      "_type": "Value"
-    },
     "claude_sonnet_46_2026_01": {
       "dtype": "string",
       "_type": "Value"
     },
     "deepseek_chat_v_32_25_12_01": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "openai_compe_gpt_54_2026_03_20": {
       "dtype": "string",
       "_type": "Value"
     },

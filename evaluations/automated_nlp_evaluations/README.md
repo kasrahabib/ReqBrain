@@ -31,12 +31,12 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
   </tr>
   <tr>
     <td><b>Zephyr-7b-beta</b></td>
-    <td><b>12.2</b></td>
-    <td><b>0.42</b></td>
-    <td><b>0.20</b></td>
+    <td><b>12.26</b></td>
+    <td><b>0.43</b></td>
+    <td><b>0.19</b></td>
     <td><b>0.36</b></td>
     <td><b>918</b></td>
-    <td><b>108</b></td>
+    <td><b>108.89</b></td>
     <td><b>0.89</b></td>
     <td><b>0.89</b></td>
     <td><b>0.89</b></td>
@@ -47,22 +47,22 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>3.16</td>
     <td>0.24</td>
     <td>0.10</td>
-    <td>0.20</td>
+    <td>0.19</td>
     <td>4109</td>
-    <td>487</td>
+    <td>487.42</td>
     <td>0.84</td>
-    <td><b>0.89</b></td>
+    <td>0.89</td>
     <td>0.86</td>
     <td>0.88</td>
   </tr>
   <tr>
     <td><b>Falcon-7b</b></td>
     <td>2.26</td>
-    <td>0.23</td>
+    <td>0.24</td>
     <td>0.07</td>
     <td>0.19</td>
     <td>2453</td>
-    <td>290</td>
+    <td>290.98</td>
     <td>0.80</td>
     <td>0.82</td>
     <td>0.85</td>
@@ -75,7 +75,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>0.11</td>
     <td>0.23</td>
     <td>2561</td>
-    <td>303</td>
+    <td>303.79</td>
     <td>0.85</td>
     <td>0.88</td>
     <td>0.86</td>
@@ -88,7 +88,7 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
     <td>0.09</td>
     <td>0.18</td>
     <td>3933</td>
-    <td>466</td>
+    <td>466.54</td>
     <td>0.81</td>
     <td>0.85</td>
     <td>0.85</td>
@@ -96,45 +96,44 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
   </tr>
   <tr>
     <td><b>ChatGPT-5.4 (untuned)</b></td>
-    <td>2.58</td>
-    <td>0.21</td>
-    <td>0.09</td>
-    <td>0.17</td>
-    <td>4869</td>
-    <td>577</td>
-    <td>0.81</td>
-    <td>0.88</td>
+    <td>3.98</td>
+    <td>0.31</td>
+    <td>0.15</td>
+    <td>0.25</td>
+    <td>2974</td>
+    <td>352.78</td>
     <td>0.84</td>
-    <td>0.85</td>
+    <td>0.88</td>
+    <td>0.86</td>
+    <td>0.87</td>
   </tr>
   <tr>
     <td><b>DeepSeek Chat V3.2 (untuned)</b></td>
-    <td>0.70</td>
-    <td>0.08</td>
-    <td>0.03</td>
-    <td>0.06</td>
-    <td>15262</td>
-    <td>1810</td>
-    <td>0.81</td>
+    <td>2.78</td>
+    <td>0.25</td>
+    <td>0.12</td>
+    <td>0.20</td>
+    <td>4117</td>
+    <td>488.37</td>
+    <td>0.83</td>
+    <td>0.88</td>
+    <td>0.85</td>
+    <td>0.87</td>
+  </tr>
+  <tr>
+    <td><b>Claude Sonnet 4.6 (untuned)</b></td>
+    <td>2.08</td>
+    <td>0.18</td>
+    <td>0.07</td>
+    <td>0.15</td>
+    <td>5157</td>
+    <td>611.74</td>
+    <td>0.80</td>
     <td>0.87</td>
     <td>0.84</td>
     <td>0.85</td>
   </tr>
-  <tr>
-    <td><b>Claude Sonnet 4.6 (untuned)</b></td>
-    <td>1.08</td>
-    <td>0.10</td>
-    <td>0.04</td>
-    <td>0.08</td>
-    <td>9841</td>
-    <td>1167</td>
-    <td>0.80</td>
-    <td>0.87</td>
-    <td>0.83</td>
-    <td>0.85</td>
-  </tr>
 </table>
-
 
 #### [`paper_visualisations.ipynb`](./paper_visualisations.ipynb)  
 - Generates all visualizations and evaluation outputs needed for the paper.
@@ -142,14 +141,14 @@ BERTScore precision (P), recall (R), and F1 are computed per instance and then a
 #### [`evaluation_set_for_nlp_metrics/`](./evaluation_set_for_nlp_metrics/)  
 Contains scripts and prediction outputs for generating requirements using different models:  
  
-- **[`falcon_instruct_prediction.ipynb`](./evaluation_set_for_nlp_metrics/falcon_instruct_prediction.ipynb):** Generates requirements using the Falcon Instruct model.  
-- **[`falcon_prediction.ipynb`](./evaluation_set_for_nlp_metrics/falcon_prediction.ipynb):** Generates requirements using Falcon Base.  
-- **[`llama_chat_hf_prediction.ipynb`](./evaluation_set_for_nlp_metrics/llama_chat_hf_prediction.ipynb):** Generates requirements using LLaMA.  
-- **[`mistralai-instruct_prediction.ipynb`](./evaluation_set_for_nlp_metrics/mistralai-instruct_prediction.ipynb):** Generates requirements using MistralAI.  
-- **[`zephyr_prediction.ipynb`](./evaluation_set_for_nlp_metrics/zephyr_prediction.ipynb):** Generates requirements using Zephyr.  
-- **[`chatgpt_5_4_latest.ipynb`](./evaluation_set_for_nlp_metrics/chatgpt_5_4_latest.ipynb):** Generates requirements using ChatGPT-5.4. 
-- **[`claude-sonnet_4_6_latest.ipynb`](./evaluation_set_for_nlp_metrics/claude-sonnet_4_6_latest.ipynb):** Generates requirements using Claude Sonnet 4.6. 
-- **[`deepseek_v3_2_latest.ipynb`](./evaluation_set_for_nlp_metrics/deepseek_v3_2_latest.ipynb):** Generates requirements using SeepSeek Chat V3.2. 
+- **[`fine_tuned_falcon_instruct_prediction.ipynb`](./evaluation_set_for_nlp_metrics/fine_tuned_falcon_instruct_prediction.ipynb):** Generates requirements using the Falcon Instruct model.  
+- **[`fine_tuned_falcon_prediction.ipynb`](./evaluation_set_for_nlp_metrics/fine_tuned_falcon_prediction.ipynb):** Generates requirements using Falcon Base.  
+- **[`fine_tuned_llama_chat_hf_prediction.ipynb`](./evaluation_set_for_nlp_metrics/fine_tuned_llama_chat_hf_prediction.ipynb):** Generates requirements using LLaMA.  
+- **[`fine_tuned_mistralai-instruct_prediction.ipynb`](./evaluation_set_for_nlp_metrics/fine_tuned_mistralai-instruct_prediction.ipynb):** Generates requirements using MistralAI.  
+- **[`fine_tuned_zephyr_prediction.ipynb`](./evaluation_set_for_nlp_metrics/fine_tuned_zephyr_prediction.ipynb):** Generates requirements using Zephyr.  
+- **[`prompt_eng_chatgpt_5_4_latest.ipynb`](./evaluation_set_for_nlp_metrics/prompt_eng_chatgpt_5_4_latest.ipynb):** Generates requirements using ChatGPT-5.4. 
+- **[`prompt_eng_claude-sonnet_4_6_latest.ipynb`](./evaluation_set_for_nlp_metrics/prompt_eng_claude-sonnet_4_6_latest.ipynb):** Generates requirements using Claude Sonnet 4.6. 
+- **[`prompt_eng_deepseek_v3_2_latest.ipynb`](./evaluation_set_for_nlp_metrics/prompt_eng_deepseek_v3_2_latest.ipynb):** Generates requirements using SeepSeek Chat V3.2. 
 - **[`models_prediction_dataset/`](./evaluation_set_for_nlp_metrics/models_prediction_dataset/):** Contains the combined dataset of original requirements and generated predictions used for pairwise evaluation.
 
 ---

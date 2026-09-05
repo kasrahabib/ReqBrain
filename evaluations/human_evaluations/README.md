@@ -30,7 +30,7 @@ Since all human evaluation directories (`p1_human_evaluation`, `p2_human_evaluat
 
 ---
 ### **An A-Priori Power Analysis:**  
-**[`a_priori_power_analysis`](./a_priori_power_analysis.ipynb)**  
+**[`a_priori_power_analysis_paired.ipynb`](./a_priori_power_analysis_paired.ipynb)**  
 - This notebook runs tests for calculating statistical power analysis.
 
 ### **Participant Demographics:**  
@@ -40,13 +40,13 @@ Since all human evaluation directories (`p1_human_evaluation`, `p2_human_evaluat
 
 ### **Statistical Analysis Notebooks:**
 
-- **[`task_b_stats_test_reqbrain_vs_untuned_baseline.ipynb`](./task_b_stats_test_reqbrain_vs_untuned_baseline.ipynb)**  
+- **[`paired_task_b_stats_test_reqbrain_vs_untuned_baseline.ipynb`](./paired_task_b_stats_test_reqbrain_vs_untuned_baseline.ipynb)**  
   - Runs statistical analysis on Task B data to address Research Questions 2 and 4 in the paper.
 
-- **[`task_c_stats_test_reqbrain_vs_human.ipynb`](./task_c_stats_test_reqbrain_vs_human.ipynb)**  
+- **[`paired_task_c_stats_test_reqbrain_vs_human.ipynb`](./paired_task_c_stats_test_reqbrain_vs_human.ipynb)**  
   - Runs statistical analysis on Task C data to address Research Questions 3 and 5 in the paper.
 
-- **[`task_d_stats_test_additional_requirements_generation.ipynb`](./task_d_stats_test_additional_requirements_generation.ipynb)**  
+- **[`paired_task_d_stats_test_additional_requirements_generation.ipynb`](./paired_task_d_stats_test_additional_requirements_generation.ipynb)**  
   - Runs statistical analysis on Task D data to address Research Question 6 in the paper.
 
 ---
